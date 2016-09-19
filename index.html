@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="jepapp">
+    <section ng-controller="MainController">
+        <p> Score: {{ score }}</p>
+        <p>{{ question }}</p>
+        <p>{{ correct }}</p>
+        <p>{{lose}}</p>
+        <button ng-click="nextquestion()">Next</button>
+        <input type="text" placeholder="Answer" ng-model="answer">
+        <ul ng-repeat="x in info">
+            <li>{{ x.question }}</li>
+            <li>{{ x.answer }}</li>
+        </ul>
+    </section>
+   
+</body>
+
+</html>
